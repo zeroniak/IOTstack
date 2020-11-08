@@ -2,10 +2,14 @@
     container_name: nodered
     build: ./services/nodered/.
     restart: unless-stopped
+    depends_on:
+      - "openhab"
     user: "0"
     privileged: true
     env_file: ./services/nodered/nodered.env
     ports:
       - 1880:1880
+    depends_on:
+      - openhab
     volumes:
       - ./volumes/nodered/data:/data

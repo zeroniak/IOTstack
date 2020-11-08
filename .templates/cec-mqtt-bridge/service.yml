@@ -1,0 +1,12 @@
+  cec-mqtt-bridge:
+    build: https://github.com/zeroniak/cec-mqtt-bridge.git
+    container_name: cec-mqtt-bridge
+    restart: unless-stopped
+    depends_on:
+      - "mosquitto"
+    devices:
+      - /dev/vchiq:/dev/vchiq
+    volumes:
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/etc/timezone:/etc/timezone:ro"
+      - "./volumes/cec-mqtt-bridge/:/opt/cec-mqtt-bridge/" 

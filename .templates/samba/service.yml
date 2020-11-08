@@ -11,4 +11,4 @@
       - "/etc/localtime:/etc/localtime:ro"
       - "/etc/timezone:/etc/timezone:ro"
       - "./volumes:/iotvolumes"
-    command: '-p -s "IOTVolumes;/iotvolumes" -u "bob;bobspasswd"'
+    command: '-p -s "IOTVolumes;/iotvolumes;yes;no;no;all" -u "pi;homeauto1234"'

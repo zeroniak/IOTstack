@@ -2,10 +2,16 @@
     image: "openhab/openhab:latest"
     container_name: openhab
     restart: unless-stopped
+    depends_on:
+      - "mariadb"
+      - "influxdb"
+      - "mosquitto"
     network_mode: host
 #    cap_add:
 #      - NET_ADMIN
 #      - NET_RAW
+    depends_on:
+      - mariadb
     volumes:
       - "/etc/localtime:/etc/localtime:ro"
       - "/etc/timezone:/etc/timezone:ro"

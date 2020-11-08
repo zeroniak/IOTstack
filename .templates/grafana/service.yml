@@ -2,6 +2,8 @@
     container_name: grafana
     image: grafana/grafana:6.3.6
     restart: unless-stopped
+    depends_on:
+      - "influxdb"
     user: "0"
     ports:
       - 3000:3000

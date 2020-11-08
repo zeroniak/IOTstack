@@ -34,6 +34,7 @@ declare -A cont_array=(
 	[qbittorrent]="qbittorrent"
 	[zigbee2mqttassistant]="zigbee2mqttassistant"
 	[samba]="samba"
+	[cec-mqtt-bridge]="cec-mqtt-bridge"
 )
 
 #The convension for CONTAINER is that it is the name of the .templates/CONTAINER directory and as the key below for the relevant arch
@@ -67,6 +68,7 @@ declare -a armhf_keys=(
 	"zigbee2mqttassistant" 
 	"qbittorrent"
 	"samba"
+	"cec-mqtt-bridge"
 )
 
 sys_arch=$(uname -m)

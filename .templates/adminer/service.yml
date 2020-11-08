@@ -2,5 +2,7 @@
     container_name: adminer
     image: adminer
     restart: unless-stopped
+    depends_on:
+      - "mariadb"
     ports:
       - 9080:8080
